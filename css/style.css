@@ -204,6 +204,7 @@ section {
 
 }
 
+
 .skills__item {
     max-width: 220px;
     display: flex;
@@ -352,6 +353,7 @@ section {
     margin-right: auto;
 }
 form{
+    position: relative;
     max-width: 460px;
     margin-left: auto;
     margin-right: auto;
@@ -398,6 +400,8 @@ textarea{
     cursor: pointer;
     color: var(--color3);
     transition: 0.5s;
+    z-index: 1;
+    position: relative;
 
 }
 .contact button:hover{
@@ -407,7 +411,7 @@ textarea{
 footer{
     background-color: var(--color2);
     padding: 20px 0;
-
+    
 }
 .footer__elements{
     display: flex;
@@ -435,4 +439,28 @@ footer p{
 .about-me__elements img{
     width:90% ;
     max-width: 340px;
+    
+}
+.wrapper{
+    background-color: var(--color3);
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color1);
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 5;
+}
+.wrapper_active{
+    opacity: 1;
+    visibility:visible;
+    transition: 0.5s;
 }
